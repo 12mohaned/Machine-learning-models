@@ -1,0 +1,30 @@
+from django.urls import path
+from . import views;
+app_name = 'main'
+urlpatterns  = [
+    path("Home",views.homepage,name = "homepage"),
+    path("signup",views.signup,name = "signup"),
+    path("ourstory",views.OurStory,name = "aboutus"),
+    path("logout",views.logout_request,name = "logout"),
+    path("login",views.login_request,name = "login"),
+    #url("<single_slug>",views.single_slug,name = "single_slug"),
+    #url("courses",views.courses,name = "courses"),
+    path("become_a_tutor",views.BecomeaTutor,name = "BecomeaTutor"),
+    path("home",views.homepage2,name = "homepage2"),
+    path("MET/Courses",views.Courses_url,name = "METCoursesURL"),
+    path("PBT/Courses",views.Courses_url,name = "PBTCoursesURL"),
+    path("AAS/Courses",views.Courses_url,name = "AASCoursesURL"),
+    path("MGT/Courses",views.Courses_url,name = "MGTCoursesURL"),
+    path("MET/Tutors",views.Tutors_url,name= "METTutorsURL"),
+    path("PBT/Tutors",views.Tutors_url,name= "PBTTutorsURL"),
+    path("AAS/Tutors",views.Tutors_url,name= "AASTutorsURL"),
+    path("MGT/Tutors",views.Tutors_url,name= "MGTTutorsURL"),
+    path("MET/Courses/reserve/<str:coursecode>/",views.course_reserve,name = "METReserveCourses"),
+    path("MGT/Courses/reserve/<str:coursecode>/",views.course_reserve,name = "MGTReserveCourses"),
+    path("PBT/Courses/reserve/<str:coursecode>/",views.course_reserve,name = "PBTReserveCourses"),
+    path("AAS/Courses/reserve/<str:coursecode>/",views.course_reserve,name = "AASReserveCourses"),
+    path("MET/Courses/Recommend/<str:coursecode>/",views.course_recommend,name = "METRecommend"),
+    path("MGT/Courses/Recommend/<str:coursecode>/",views.course_recommend,name = "MGTRecommend"),
+    path("PBT/Courses/Recommend/<str:coursecode>/",views.course_recommend,name = "PBTRecommend"),
+    path("AAS/Courses/Recommend/<str:coursecode>/",views.course_recommend,name = "AASRecommend"),
+]
