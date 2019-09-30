@@ -1,0 +1,41 @@
+{% extends "main/Base.html"%}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3 col-sm-6">
+            <div class="card hovercard">
+                <div class="cardheader">
+
+                </div>
+                <div class="center">
+                  {% load static %}
+                    <img src="mina.jpeg" />
+                </div>
+                <div class="center">
+                    <div class="title">
+                        <a>{{user.username}}</a>
+                    </div>
+                  <input id = "Biography"  type = "<textarea name="Add Your Bio" rows="8" cols="80" />
+                  <button>Add Biography</button>
+                </div>
+                <br>
+                <div class="center">
+                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/mohanedmashaly">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="https://www.facebook.com/mohanedmashaly">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="btn btn-warning btn-sm" rel="publisher" href="https://www.github.com/12mohaned">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a class="btn btn-warning btn-sm" rel="publisher" href="https://www.linkedin.com/in/mohaned-mashaly">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+{% endblock %}
